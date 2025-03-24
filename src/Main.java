@@ -11,13 +11,13 @@ public class Main {
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
 
         System.out.println("Задача 2");
-        int[] weeklyPayouts = Arrays.copyOf(payments, payments.length);
-        int weeklyPayoutsMax = -1;
-        int weeklyPayoutsMin = 1;
+        int[] weeklyPayouts = {5000, 10, 10000, 2350, 12690};
+        int weeklyPayoutsMax = weeklyPayouts[0];
+        int weeklyPayoutsMin = weeklyPayouts[0];
         for (int weeklyPayout : weeklyPayouts) {
             if (weeklyPayout > weeklyPayoutsMax) {
                 weeklyPayoutsMax = weeklyPayout;
-            } else if (weeklyPayout > weeklyPayoutsMin) {
+            } else if (weeklyPayout < weeklyPayoutsMin) {
                 weeklyPayoutsMin = weeklyPayout;
             }
         }
@@ -27,9 +27,9 @@ public class Main {
         int[] averageAmount = Arrays.copyOf(payments, payments.length);
         int monthlyExpenses = 0;
         for (int j : averageAmount) {
-            monthlyExpenses += j / 5;
+            monthlyExpenses += j;
         }
-        System.out.println("Средняя сумма трат за месяц составила " + monthlyExpenses + " рублей");
+        System.out.println("Средняя сумма трат за месяц составила " + monthlyExpenses / averageAmount.length + " рублей");
 
         System.out.println("Задача 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
