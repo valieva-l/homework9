@@ -33,7 +33,7 @@ public class Main {
 
         System.out.println("Задача 4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (char i = 0; i < reverseFullName.length / 2 ; i++) {
+        for (char i = 0; i < reverseFullName.length / 2; i++) {
             char temp = reverseFullName[i];
             reverseFullName[i] = reverseFullName[reverseFullName.length - 1 - i];
             reverseFullName[reverseFullName.length - 1 - i] = temp;
